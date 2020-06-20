@@ -9,9 +9,11 @@ namespace WebApplication1
 {
     public partial class Index1 : System.Web.UI.Page
     {
+        BlogDataContext dt = new BlogDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            rpChiTiet.DataSource = dt.ChiTiet_SelectHome();
+            rpChiTiet.DataBind();
         }
     }
 }
