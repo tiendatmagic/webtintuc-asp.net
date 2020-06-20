@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Repeater ID="rpBanTin" runat="server">
     <ItemTemplate>
-        <h1>T<%# Eval("tenBanTin") %>t</h1>
+        <h1><%# Eval("tenBanTin") %></h1>
     </ItemTemplate>
     </asp:Repeater>
 <div id="ndcontent">

@@ -20,7 +20,7 @@
         <elementListCompartment Id="60ca2df8-6e42-49c5-a31a-a7c002bd50e3" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BlogDataContext/BanTin/BanTin_ChiTiet" />
       <nodes>
         <classShapeMoniker Id="7851b89e-a419-44d2-a83f-78d58ff417a7" />
