@@ -9,7 +9,8 @@
     <ItemTemplate>
         <ul>
             <li>
-                <a href="#"><%# Eval("tieuDe") %></a>
+                <a href="chitiet.aspx?idbantin=<%# Eval("IDBanTin") %>&id=<%# Eval("ID") %>"><%# Eval("tieuDe") %></a>
+            
             </li>
         </ul>
     </ItemTemplate>

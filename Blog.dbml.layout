@@ -2,29 +2,29 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Blog">
   <DataContextMoniker Name="/BlogDataContext" />
   <nestedChildShapes>
-    <classShape Id="9e7956f9-2bb4-4b37-a7ec-f8e976b5199b" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+    <classShape Id="7851b89e-a419-44d2-a83f-78d58ff417a7" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
       <DataClassMoniker Name="/BlogDataContext/BanTin" />
       <nestedChildShapes>
-        <elementListCompartment Id="773a20c3-2b5e-4edd-989c-51aa70b0fbef" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd1e9d5c-d6a3-47b2-a518-5ad1f5cd4ac5" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="90d9b546-31c8-444a-9686-bc3c5fa61ee7" absoluteBounds="0.75, 3.75, 2, 1.3862939453125005">
+    <classShape Id="e24aa3ae-86c6-4e7b-80c5-9eb801b41267" absoluteBounds="0.75, 3.75, 2, 1.3862939453125005">
       <DataClassMoniker Name="/BlogDataContext/DangNhap" />
       <nestedChildShapes>
-        <elementListCompartment Id="e4e59386-208f-4c8e-8f8f-191f37eb9103" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6fe9c349-7239-4b9f-b34f-aa2793e9e66f" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4c72f09b-bc56-4d09-8d98-54d3a3d84f6d" absoluteBounds="3.5, 0.875, 2, 1.9631982421874998">
+    <classShape Id="852053d0-a560-498c-9ea2-66f7f2435f06" absoluteBounds="3.5, 0.875, 2, 1.9631982421874998">
       <DataClassMoniker Name="/BlogDataContext/ChiTiet" />
       <nestedChildShapes>
-        <elementListCompartment Id="6a52ab7d-bf2d-4109-9e31-232c9823584d" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="60ca2df8-6e42-49c5-a31a-a7c002bd50e3" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/BlogDataContext/BanTin/BanTin_ChiTiet" />
       <nodes>
-        <classShapeMoniker Id="9e7956f9-2bb4-4b37-a7ec-f8e976b5199b" />
-        <classShapeMoniker Id="4c72f09b-bc56-4d09-8d98-54d3a3d84f6d" />
+        <classShapeMoniker Id="7851b89e-a419-44d2-a83f-78d58ff417a7" />
+        <classShapeMoniker Id="852053d0-a560-498c-9ea2-66f7f2435f06" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

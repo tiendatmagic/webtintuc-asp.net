@@ -99,17 +99,17 @@ namespace WebApplication1
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_Update")]
-		public int ChiTiet_Update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string tieuDe, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string noiDung, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Search")]
+		public ISingleResult<DangNhap_SearchResult> DangNhap_Search([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string passWord)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tieuDe, noiDung, iD);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord);
+			return ((ISingleResult<DangNhap_SearchResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_Insert", IsComposable=true)]
-		public object BanTin_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string noiDung)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_Insert")]
+		public void BanTin_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string noiDung)
 		{
-			return ((object)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), noiDung).ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), noiDung);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_SelectAll")]
@@ -119,16 +119,24 @@ namespace WebApplication1
 			return ((ISingleResult<BanTin_SelectAllResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_Update", IsComposable=true)]
-		public object BanTin_Update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string noiDung, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_Update")]
+		public void BanTin_Update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string noiDung, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
 		{
-			return ((object)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), noiDung, iDBanTin).ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), noiDung, iDBanTin);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_Insert")]
 		public int ChiTiet_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string tieuDe, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string noiDung, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> ngayDang, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tieuDe, noiDung, ngayDang, iDBanTin);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_LanXem")]
+		public int ChiTiet_LanXem([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> lanXem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, lanXem);
+			lanXem = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -146,27 +154,6 @@ namespace WebApplication1
 			return ((ISingleResult<ChiTiet_SelectAllResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SLX")]
-		public int ChiTiet_SLX([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> lanXem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lanXem, iD);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Search")]
-		public ISingleResult<DangNhap_SearchResult> DangNhap_Search([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string passWord)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord);
-			return ((ISingleResult<DangNhap_SearchResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Insert")]
-		public int DangNhap_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string passWord)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectHome")]
 		public ISingleResult<ChiTiet_SelectHomeResult> ChiTiet_SelectHome()
 		{
@@ -175,9 +162,9 @@ namespace WebApplication1
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectID")]
-		public ISingleResult<ChiTiet_SelectIDResult> ChiTiet_SelectID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
+		public ISingleResult<ChiTiet_SelectIDResult> ChiTiet_SelectID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDBanTin);
 			return ((ISingleResult<ChiTiet_SelectIDResult>)(result.ReturnValue));
 		}
 		
@@ -188,11 +175,24 @@ namespace WebApplication1
 			return ((ISingleResult<ChiTiet_SelectRanRomResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_LanXem")]
-		public int ChiTiet_LanXem([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> lanXem)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SLX")]
+		public int ChiTiet_SLX([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> lanXem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, lanXem);
-			lanXem = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lanXem, iD);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_Update")]
+		public int ChiTiet_Update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string tieuDe, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string noiDung, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tieuDe, noiDung, iD);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DangNhap_Insert")]
+		public int DangNhap_Insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string passWord)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -597,6 +597,68 @@ namespace WebApplication1
 		}
 	}
 	
+	public partial class DangNhap_SearchResult
+	{
+		
+		private int _IDName;
+		
+		private string _userName;
+		
+		private string _passWord;
+		
+		public DangNhap_SearchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDName", DbType="Int NOT NULL")]
+		public int IDName
+		{
+			get
+			{
+				return this._IDName;
+			}
+			set
+			{
+				if ((this._IDName != value))
+				{
+					this._IDName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(50)")]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this._userName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(50)")]
+		public string passWord
+		{
+			get
+			{
+				return this._passWord;
+			}
+			set
+			{
+				if ((this._passWord != value))
+				{
+					this._passWord = value;
+				}
+			}
+		}
+	}
+	
 	public partial class BanTin_SelectAllResult
 	{
 		
@@ -868,68 +930,6 @@ namespace WebApplication1
 				if ((this._IDBanTin != value))
 				{
 					this._IDBanTin = value;
-				}
-			}
-		}
-	}
-	
-	public partial class DangNhap_SearchResult
-	{
-		
-		private int _IDName;
-		
-		private string _userName;
-		
-		private string _passWord;
-		
-		public DangNhap_SearchResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDName", DbType="Int NOT NULL")]
-		public int IDName
-		{
-			get
-			{
-				return this._IDName;
-			}
-			set
-			{
-				if ((this._IDName != value))
-				{
-					this._IDName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(50)")]
-		public string userName
-		{
-			get
-			{
-				return this._userName;
-			}
-			set
-			{
-				if ((this._userName != value))
-				{
-					this._userName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(50)")]
-		public string passWord
-		{
-			get
-			{
-				return this._passWord;
-			}
-			set
-			{
-				if ((this._passWord != value))
-				{
-					this._passWord = value;
 				}
 			}
 		}
