@@ -195,6 +195,13 @@ namespace WebApplication1
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWord);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BanTin_SelectID")]
+		public ISingleResult<BanTin_SelectIDResult> BanTin_SelectID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDBanTin);
+			return ((ISingleResult<BanTin_SelectIDResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BanTin")]
@@ -1278,6 +1285,50 @@ namespace WebApplication1
 				if ((this._IDBanTin != value))
 				{
 					this._IDBanTin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class BanTin_SelectIDResult
+	{
+		
+		private int _IDBanTin;
+		
+		private string _tenBanTin;
+		
+		public BanTin_SelectIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBanTin", DbType="Int NOT NULL")]
+		public int IDBanTin
+		{
+			get
+			{
+				return this._IDBanTin;
+			}
+			set
+			{
+				if ((this._IDBanTin != value))
+				{
+					this._IDBanTin = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenBanTin", DbType="NVarChar(50)")]
+		public string tenBanTin
+		{
+			get
+			{
+				return this._tenBanTin;
+			}
+			set
+			{
+				if ((this._tenBanTin != value))
+				{
+					this._tenBanTin = value;
 				}
 			}
 		}

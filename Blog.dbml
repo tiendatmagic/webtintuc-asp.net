@@ -132,4 +132,11 @@
     <Parameter Name="passWord" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.BanTin_SelectID" Method="BanTin_SelectID">
+    <Parameter Name="IDBanTin" Parameter="iDBanTin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BanTin_SelectIDResult">
+      <Column Name="IDBanTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tenBanTin" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
