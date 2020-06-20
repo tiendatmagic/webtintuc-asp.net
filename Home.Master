@@ -17,7 +17,7 @@
                     <li><a href="Index.aspx">Trang chủ</a></li>
                     <asp:Repeater ID="rpBanTin" runat="server">
                     <ItemTemplate>
-                     <li><a href="#"><%# Eval("tenBanTin") %></a></li>     
+                     <li><a href="bantin.aspx?idbantin=<%# Eval("IDBanTin") %>"><%# Eval("tenBanTin") %></a></li>     
                     
                     </ItemTemplate>
                     </asp:Repeater>

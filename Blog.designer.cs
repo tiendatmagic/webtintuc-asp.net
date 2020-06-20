@@ -202,6 +202,13 @@ namespace WebApplication1
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD);
 			return ((ISingleResult<ChiTiet_SelectIDResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectBanTin")]
+		public ISingleResult<ChiTiet_SelectBanTinResult> ChiTiet_SelectBanTin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDBanTin);
+			return ((ISingleResult<ChiTiet_SelectBanTinResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BanTin")]
@@ -1234,6 +1241,122 @@ namespace WebApplication1
 		private System.Nullable<int> _IDBanTin;
 		
 		public ChiTiet_SelectIDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tieuDe", DbType="NVarChar(200)")]
+		public string tieuDe
+		{
+			get
+			{
+				return this._tieuDe;
+			}
+			set
+			{
+				if ((this._tieuDe != value))
+				{
+					this._tieuDe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_noiDung", DbType="NVarChar(MAX)")]
+		public string noiDung
+		{
+			get
+			{
+				return this._noiDung;
+			}
+			set
+			{
+				if ((this._noiDung != value))
+				{
+					this._noiDung = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lanXem", DbType="Int")]
+		public System.Nullable<int> lanXem
+		{
+			get
+			{
+				return this._lanXem;
+			}
+			set
+			{
+				if ((this._lanXem != value))
+				{
+					this._lanXem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngayDang", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ngayDang
+		{
+			get
+			{
+				return this._ngayDang;
+			}
+			set
+			{
+				if ((this._ngayDang != value))
+				{
+					this._ngayDang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBanTin", DbType="Int")]
+		public System.Nullable<int> IDBanTin
+		{
+			get
+			{
+				return this._IDBanTin;
+			}
+			set
+			{
+				if ((this._IDBanTin != value))
+				{
+					this._IDBanTin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTiet_SelectBanTinResult
+	{
+		
+		private int _ID;
+		
+		private string _tieuDe;
+		
+		private string _noiDung;
+		
+		private System.Nullable<int> _lanXem;
+		
+		private System.Nullable<System.DateTime> _ngayDang;
+		
+		private System.Nullable<int> _IDBanTin;
+		
+		public ChiTiet_SelectBanTinResult()
 		{
 		}
 		
