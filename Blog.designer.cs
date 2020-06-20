@@ -146,13 +146,6 @@ namespace WebApplication1
 			return ((ISingleResult<ChiTiet_SelectAllResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectID")]
-		public ISingleResult<ChiTiet_SelectIDResult> ChiTiet_SelectID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDBanTin);
-			return ((ISingleResult<ChiTiet_SelectIDResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SLX")]
 		public int ChiTiet_SLX([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> lanXem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
 		{
@@ -179,6 +172,28 @@ namespace WebApplication1
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ChiTiet_SelectHomeResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectID")]
+		public ISingleResult<ChiTiet_SelectIDResult> ChiTiet_SelectID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD);
+			return ((ISingleResult<ChiTiet_SelectIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_SelectRanRom")]
+		public ISingleResult<ChiTiet_SelectRanRomResult> ChiTiet_SelectRanRom([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDBanTin", DbType="Int")] System.Nullable<int> iDBanTin)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDBanTin);
+			return ((ISingleResult<ChiTiet_SelectRanRomResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTiet_LanXem")]
+		public int ChiTiet_LanXem([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> lanXem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, lanXem);
+			lanXem = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -858,6 +873,184 @@ namespace WebApplication1
 		}
 	}
 	
+	public partial class DangNhap_SearchResult
+	{
+		
+		private int _IDName;
+		
+		private string _userName;
+		
+		private string _passWord;
+		
+		public DangNhap_SearchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDName", DbType="Int NOT NULL")]
+		public int IDName
+		{
+			get
+			{
+				return this._IDName;
+			}
+			set
+			{
+				if ((this._IDName != value))
+				{
+					this._IDName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(50)")]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this._userName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(50)")]
+		public string passWord
+		{
+			get
+			{
+				return this._passWord;
+			}
+			set
+			{
+				if ((this._passWord != value))
+				{
+					this._passWord = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTiet_SelectHomeResult
+	{
+		
+		private int _ID;
+		
+		private string _tieuDe;
+		
+		private string _noiDung;
+		
+		private System.Nullable<int> _lanXem;
+		
+		private System.Nullable<System.DateTime> _ngayDang;
+		
+		private System.Nullable<int> _IDBanTin;
+		
+		public ChiTiet_SelectHomeResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tieuDe", DbType="NVarChar(200)")]
+		public string tieuDe
+		{
+			get
+			{
+				return this._tieuDe;
+			}
+			set
+			{
+				if ((this._tieuDe != value))
+				{
+					this._tieuDe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_noiDung", DbType="NVarChar(MAX)")]
+		public string noiDung
+		{
+			get
+			{
+				return this._noiDung;
+			}
+			set
+			{
+				if ((this._noiDung != value))
+				{
+					this._noiDung = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lanXem", DbType="Int")]
+		public System.Nullable<int> lanXem
+		{
+			get
+			{
+				return this._lanXem;
+			}
+			set
+			{
+				if ((this._lanXem != value))
+				{
+					this._lanXem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngayDang", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ngayDang
+		{
+			get
+			{
+				return this._ngayDang;
+			}
+			set
+			{
+				if ((this._ngayDang != value))
+				{
+					this._ngayDang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBanTin", DbType="Int")]
+		public System.Nullable<int> IDBanTin
+		{
+			get
+			{
+				return this._IDBanTin;
+			}
+			set
+			{
+				if ((this._IDBanTin != value))
+				{
+					this._IDBanTin = value;
+				}
+			}
+		}
+	}
+	
 	public partial class ChiTiet_SelectIDResult
 	{
 		
@@ -974,69 +1167,7 @@ namespace WebApplication1
 		}
 	}
 	
-	public partial class DangNhap_SearchResult
-	{
-		
-		private int _IDName;
-		
-		private string _userName;
-		
-		private string _passWord;
-		
-		public DangNhap_SearchResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDName", DbType="Int NOT NULL")]
-		public int IDName
-		{
-			get
-			{
-				return this._IDName;
-			}
-			set
-			{
-				if ((this._IDName != value))
-				{
-					this._IDName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(50)")]
-		public string userName
-		{
-			get
-			{
-				return this._userName;
-			}
-			set
-			{
-				if ((this._userName != value))
-				{
-					this._userName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passWord", DbType="NVarChar(50)")]
-		public string passWord
-		{
-			get
-			{
-				return this._passWord;
-			}
-			set
-			{
-				if ((this._passWord != value))
-				{
-					this._passWord = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTiet_SelectHomeResult
+	public partial class ChiTiet_SelectRanRomResult
 	{
 		
 		private int _ID;
@@ -1051,7 +1182,7 @@ namespace WebApplication1
 		
 		private System.Nullable<int> _IDBanTin;
 		
-		public ChiTiet_SelectHomeResult()
+		public ChiTiet_SelectRanRomResult()
 		{
 		}
 		

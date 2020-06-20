@@ -90,6 +90,21 @@
     text-align:justify;
 }
 
+#ndcontent ul{
+    margin:20px 15px 20px 10px;
+
+}
+
+#ndcontent ul li a{
+    color: blueviolet;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#ndcontent ul li a:hover {
+    color: red;
+    text-decoration:underline;
+}
 #content h1 {
     margin: 0;
     padding: 5px 10px;
