@@ -12,6 +12,7 @@ namespace WebApplication1
         BlogDataContext dt = new BlogDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             int? so = null;
             int id = Convert.ToInt32(Request["ID"]);
             int idbantin = Convert.ToInt32(Request["idbantin"]);
@@ -31,7 +32,8 @@ namespace WebApplication1
             rpBanTin.DataBind();
             rpChiTiet.DataSource = dt.ChiTiet_SelectID(id);
             rpChiTiet.DataBind();
-
+            rpRanDom.DataSource = dt.ChiTiet_SelectRanRom(idbantin);
+            rpRanDom.DataBind();
 
         }
     }

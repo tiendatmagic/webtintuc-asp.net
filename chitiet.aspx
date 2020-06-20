@@ -19,6 +19,18 @@
         <%# Eval("noiDung") %>
         </ItemTemplate>
     </asp:Repeater>
+    <h3 style="color:blue">Xem thêm:</h3>
+        <ul>
+            <asp:Repeater ID="rpRanDom" runat="server">
+            <ItemTemplate>
+                <li>
+                    <a href="chitiet.aspx?idbantin=<%# Eval("IDBanTin") %>&id=<%# Eval("ID") %>"><%# Eval("tieuDe") %></a>
+                </li>
+            </ItemTemplate>
 
+        </asp:Repeater>
+        </ul>
+        
+    
 </div>
 </asp:Content>
